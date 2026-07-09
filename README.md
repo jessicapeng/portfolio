@@ -29,4 +29,4 @@ npm run build   # production build
 
 - GitHub: [github.com/jessicapeng](https://github.com/jessicapeng)
 - LinkedIn: [linkedin.com/in/pengjessica](https://www.linkedin.com/in/pengjessica)
-- Email: [jessica9peng@gmail.com](mailto:jessica9peng@gmail.com)
+- Email: [jessica9peng@gmail.com](mailto:jessicaxpeng@gmail.com)
