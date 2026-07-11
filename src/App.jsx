@@ -4,8 +4,11 @@ import './App.css';
 const profileImage =
   'https://static.wixstatic.com/media/2296b6_34c632e1db4c433c8a77a2075cb92964~mv2.png/v1/crop/x_0,y_33,w_1182,h_1297/fill/w_406,h_446,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/profile%20professional.png';
 
+const SHOW_INVOLVEMENT = false; 
+
 const navItems = [
   ['Experience', '#section-experience'],
+  ...(SHOW_INVOLVEMENT ? [['Involvement', '#section-involvement']] : []),
   ['Education', '#section-education'],
   ['Skills', '#section-skills'],
   ['Projects', '#section-projects'],
@@ -13,7 +16,7 @@ const navItems = [
 ];
 
 const stats = [
-  ['3+', 'Years at Goldman Sachs'],
+  ['4+', 'Years at Goldman Sachs'],
   ['3.9', 'Columbia GPA'],
   ['6+', 'Projects Shipped'],
   ['20+', 'Technologies'],
@@ -24,21 +27,22 @@ const experiences = [
     date: '2022 - 2025',
     company: 'Goldman Sachs',
     role: 'Software Engineer (Associate) · Software Engineer (Analyst)',
-    badge: 'Investment Banking Engineering · AI Applications',
+    badge: 'Investment Banking Engineering · AI Applications · Marcus',
+    awards: [
+      "Chair of Goldman's Junior Engineering Committee",
+      { text: 'Recipient of Goldman Sachs Cultural Award', color: 'purple' },
+    ],
     featured: true,
   },
   {
     date: '2021',
     company: 'Goldman Sachs',
-    role: 'Engineering Analyst',
-    badge: 'Engineering Division',
-    featured: true,
+    role: 'Engineering Intern',
   },
   {
     date: '2020',
     company: 'Apple',
     role: 'Software Engineering Intern',
-    badge: 'Software Engineering',
   },
   {
     date: '2021',
@@ -47,28 +51,124 @@ const experiences = [
     badge: 'Research & Development',
   },
   {
+    date: '2019 - 2020',
+    company: 'Alinea Invest',
+    role: 'Early Engineer',
+    badge: 'YC \'23 Startup',
+  },
+  {
     date: '2019 - 2021',
     company: 'Columbia University',
     role: 'Head Teaching Assistant',
-    badge: 'Computer Science',
+    badge: 'Python · Artificial Intelligence',
   },
   {
     date: '2019',
     company: 'Columbia Computer Vision Multimedia Lab',
-    role: 'Research Intern',
-    badge: 'Computer Vision · AI Research',
+    role: 'Computer Vision Researcher',
   },
   {
     date: '2018',
     company: 'University of California, Berkeley',
-    role: 'Research Intern',
-    badge: 'Research',
+    role: 'AR/VR Research Intern',
   },
   {
     date: '2017',
     company: "Harvard Medical School & Brigham and Women's Hospital",
-    role: 'Research Intern',
-    badge: 'Medical AI Research',
+    role: 'Medical AI Research Intern',
+  },
+];
+
+const involvements = [
+  {
+    title: 'Fireside Chat with Marco Argenti',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Moderator',
+    description:
+      "Hosted a fireside chat with Goldman Sachs' Chief Information Officer on AI, engineering culture, and career growth.",
+    image: 'https://picsum.photos/seed/fireside/240/180',
+  },
+  {
+    title: 'Decoding the Business: Understanding Global Banking Markets, Asset Wealth Management, and Platform Solutions',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Speaker',
+    description:
+      "Gave a firm-wide talk breaking down Goldman's three business lines and how engineering powers each of them.",
+    image: 'https://picsum.photos/seed/decoding/240/180',
+  },
+  {
+    title: 'GS Alumni in the Startup World',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Host',
+    description:
+      'Hosted a conversation with Goldman alumni who founded and joined startups, on making the leap from finance to founding.',
+    image: 'https://picsum.photos/seed/alumni/240/180',
+  },
+  {
+    title: 'Building User Interfaces for AI Applications',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Speaker',
+    description:
+      'Talk on designing and building user interfaces for AI products, from streaming responses to human-in-the-loop patterns.',
+    image: 'https://picsum.photos/seed/buildui/240/180',
+  },
+  {
+    title: 'Prompt Engineering',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Speaker',
+    description:
+      'Hands-on session for engineers on prompt engineering techniques for LLM applications in production.',
+    image: 'https://picsum.photos/seed/prompt/240/180',
+  },
+  {
+    title: 'NIC Mentorship Panel',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Panelist',
+    description:
+      'Spoke on a panel about mentorship — finding mentors, being one, and growing as a junior engineer at the firm.',
+    image: 'https://picsum.photos/seed/mentorship/240/180',
+  },
+  {
+    title: 'NIC Global Leadership Forum',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Organizer',
+    description:
+      'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
+    image: 'https://picsum.photos/seed/showcase/240/180',
+  },
+  {
+    title: 'NIC Networking Panel',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Panelist',
+    description:
+      'Panel discussion on building a network across divisions and making the most of the analyst community.',
+    image: 'https://picsum.photos/seed/networking/240/180',
+  },
+  {
+    title: 'NIC AI Hackathon',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Organizer',
+    description:
+      'Helped organize an AI hackathon for engineers across the firm to prototype Gen AI applications.',
+    image: 'https://picsum.photos/seed/hackathon/240/180',
+  },
+  {
+    title: 'NIC Year End Showcase',
+    org: 'Goldman Sachs',
+    year: '2026',
+    role: 'Organizer',
+    description:
+      'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
+    image: 'https://picsum.photos/seed/showcase/240/180',
   },
 ];
 
@@ -77,26 +177,45 @@ const education = [
     year: '2018 - 2022',
     school: 'Columbia University',
     degree: 'B.S. in Computer Science · New York, NY',
-    pills: ['GPA: 3.9', "Dean's List", 'AI / NLP', 'Databases'],
+    pills: ['Dean\'s List', "GPA: 3.9", 'AI / NLP', 'Databases'],
     primary: true,
   },
   {
     year: '2014 - 2018',
     school: 'Lynbrook High School',
     degree: 'High School Diploma · San Jose, CA',
-    pills: ['Valedictorian', 'GPA: 4.0', 'ACT: 35'],
+    pills: ['Valedictorian', 'GPA: 4.0', 'SAT II Math & Physics: 800','ACT: 35'],
   },
 ];
 
 const skillGroups = [
   {
     title: 'AI / ML',
-    skills: ['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'MATLAB', 'Research'],
+    skills: ['Python', 'PyTorch', 'TensorFlow', 'RAG', 'MCP', 'ADK', 'Computer Vision', 'NLP', 'MATLAB', 'Research'],
     highlights: ['Python', 'TensorFlow', 'Computer Vision', 'NLP'],
   },
   {
     title: 'Engineering',
-    skills: ['Java', 'C / C++', 'React', 'Flask', 'MySQL', 'Git', 'iOS'],
+    skills: [
+      'Java',
+      'C / C++',
+      'TypeScript',
+      'SQL',
+      'GraphQL',
+      'Swift',
+      'React',
+      'FastAPI',
+      'Flask',
+      'AWS',
+      'Docker',
+      'K8s',
+      'Kafka',
+      'Snowflake',
+      'Elasticsearch',
+      'MySQL',
+      'Git',
+      'iOS',
+    ],
     highlights: ['Java', 'C / C++'],
   },
   {
@@ -108,54 +227,42 @@ const skillGroups = [
 
 const projects = [
   {
-    icon: '🚑',
-    title: 'RESP — First Responder App',
+    title: 'RESP First Responder App',
     href: 'https://github.com/msradam/resp-api',
     description:
       'Application for 1st responders to reconnect disaster victims with family members and administer psychological first aid.',
     tag: 'Full-Stack · Humanitarian Tech',
-    background: 'linear-gradient(135deg,#e8f0fe,#c7d7fb)',
   },
   {
-    icon: '🧬',
     title: 'Engineering 3D Phantom',
     description:
       'Patient-specific 3D phantom to validate robotic-guided needle-insertion prostate cancer biopsy through MRI using AI segmentation.',
     tag: 'Medical AI · Robotics',
-    background: 'linear-gradient(135deg,#f0f4ff,#dde8ff)',
   },
   {
-    icon: '🦵',
-    title: 'Inertial Knee Brace',
+    title: 'ACL Inertial Knee Brace',
     description:
       'Integrated Mbientlab inertial sensors into a knee brace to collect movement data and prevent ACL tears in athletes.',
     tag: 'IoT · Wearables · Sports Tech',
-    background: 'linear-gradient(135deg,#e8f8f4,#c7f0e4)',
   },
   {
-    icon: '🔍',
     title: 'Political Visual Literacy',
     description:
       'TensorFlow ML pipelines using Faster RCNN and Google Object Detection to identify extremist group symbols.',
     tag: 'Computer Vision · TensorFlow',
-    background: 'linear-gradient(135deg,#fff0f0,#ffd7d7)',
   },
   {
-    icon: '🏀',
     title: 'Space Jam',
     href: 'https://www.youtube.com/watch?v=z3NT4RAedZU',
     description:
       'Backboard shooter game using SolidWorks, Arduino, IR beams, laser cutting, and 3D printing for Art of Engineering.',
     tag: 'Hardware · Arduino · CAD',
-    background: 'linear-gradient(135deg,#fff8e8,#ffedc7)',
   },
   {
-    icon: '🦠',
     title: 'Cell Virus Simulation',
     description:
       'Simulation of a controlled epidemic in NYC with calculated probabilities for infection, resistance, recovery, and transmission.',
     tag: 'Simulation · Epidemiology',
-    background: 'linear-gradient(135deg,#f0f0ff,#d7d7ff)',
   },
 ];
 
@@ -175,7 +282,6 @@ function Nav({ mobileOpen, onToggleMobile, onCloseMobile }) {
       <nav id="redesign-nav">
         <a className="nav-logo" href="#redesign-hero" onClick={onCloseMobile}>
           Jessica Peng
-          <span />
         </a>
         <ul className="nav-links">
           {navItems.map(([label, href]) => (
@@ -212,26 +318,28 @@ function Hero() {
     <section id="redesign-hero">
       <div className="hero-grid">
         <div className="hero-left">
-          <div className="hero-badge">AI Engineer · Finance</div>
+          <div className="hero-badge">AI Engineer · Fintech</div>
           <h1 className="hero-name">
-            Jessica
-            <br />
-            <span className="accent">Peng</span>
+            Jessica Peng
           </h1>
           <p className="hero-title">
             <strong>AI Software Engineer</strong> at Goldman Sachs
           </p>
           <p className="hero-description">
-            Building intelligent systems at the intersection of artificial intelligence and investment
-            banking. Columbia CS graduate developing cutting-edge AI applications for financial
-            engineering.
+             Columbia University CS graduate developing Gen AI applications within Investment Banking at Goldman Sachs. ​
           </p>
           <div className="hero-tags">
-            <span className="hero-tag">🤖 Machine Learning</span>
-            <span className="hero-tag">💹 Investment Banking</span>
-            <span className="hero-tag">🧠 NLP / LLMs</span>
-            <span className="hero-tag">📊 Financial Engineering</span>
-            <span className="hero-tag">🔬 Computer Vision</span>
+            <span className="hero-tag">Machine Learning</span>
+            <span className="hero-tag">NLP</span>
+            <span className="hero-tag">Computer Vision</span>
+            <span className="hero-tag">Multi-Agent</span>
+            <span className="hero-tag">RAG</span>
+            <span className="hero-tag">Financial Engineering</span>
+            <span className="hero-tag">Investment Banking</span>
+            <span className="hero-tag">Gen AI</span>
+
+
+
           </div>
           <div className="hero-cta">
             <a href="mailto:jessica9peng@gmail.com" className="btn-primary">
@@ -250,7 +358,9 @@ function Hero() {
           <hr className="hero-card-divider" />
           <div className="hero-card-info">
             <InfoItem label="Company" value="Goldman Sachs" />
-            <InfoItem label="Education" value="Columbia University, CS" />
+            <InfoItem label="Education">
+              CS, Columbia University
+            </InfoItem>
             <InfoItem label="Email">
               <a href="mailto:jessica9peng@gmail.com">jessica9peng@gmail.com</a>
             </InfoItem>
@@ -297,14 +407,54 @@ function Experience() {
   return (
     <div id="section-experience">
       <section className="section section-narrow">
-        <SectionHeader tag="Career" title="Experience" />
+        <SectionHeader tag="Career"  />
         <div className="timeline">
           {experiences.map((item) => (
             <div className={`timeline-item${item.featured ? ' featured' : ''}`} key={`${item.company}-${item.date}`}>
               <div className="timeline-date">{item.date}</div>
               <div className="timeline-company">{item.company}</div>
               <div className="timeline-role">{item.role}</div>
-              <span className="timeline-badge">{item.badge}</span>
+              {item.badge && <span className="timeline-badge">{item.badge}</span>}
+              {item.awards && (
+                <div className="timeline-awards">
+                  {item.awards.map((award) => {
+                    const text = typeof award === 'string' ? award : award.text;
+                    const color = typeof award === 'string' ? '' : ` ${award.color}`;
+                    return (
+                      <span className={`timeline-award${color}`} key={text}>
+                        {text}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function Involvement() {
+  return (
+    <div id="section-involvement">
+      <section className="section section-narrow">
+        <SectionHeader tag="Events & Leadership" />
+        <div className="involvement-rows">
+          {involvements.map((event) => (
+            <div className="involvement-row" key={event.title}>
+              <img src={event.image} alt={event.title} className="involvement-img" />
+              <div className="involvement-body">
+                <div className="involvement-row-title">
+                  {event.title}
+                  <span className="involvement-role">{event.role}</span>
+                </div>
+                <div className="involvement-meta">
+                  {event.org} · {event.year}
+                </div>
+                <div className="involvement-desc">{event.description}</div>
+              </div>
             </div>
           ))}
         </div>
@@ -317,7 +467,7 @@ function Education() {
   return (
     <div id="section-education">
       <section className="section section-narrow">
-        <SectionHeader tag="Academic" title="Education" />
+        <SectionHeader tag="Education" />
         <div className="edu-grid">
           {education.map((item) => (
             <div className={`edu-card${item.primary ? ' primary' : ''}`} key={item.school}>
@@ -343,7 +493,7 @@ function Skills() {
   return (
     <div id="section-skills">
       <section className="section section-narrow">
-        <SectionHeader tag="Expertise" title="Skills" />
+        <SectionHeader tag="Skills" />
         <div className="skills-categories">
           {skillGroups.map((group) => (
             <div className="skill-category" key={group.title}>
@@ -367,13 +517,10 @@ function Projects() {
   return (
     <div id="section-projects">
       <section className="section section-wide">
-        <SectionHeader tag="Portfolio" title="Projects" />
+        <SectionHeader tag="Projects"/>
         <div className="projects-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="project-card-img-placeholder" style={{ background: project.background }}>
-                {project.icon}
-              </div>
               <div className="project-card-body">
                 <h3 className="project-card-title">
                   {project.href ? (
@@ -400,7 +547,7 @@ function Contact() {
     <section id="section-contact">
       <span className="contact-tag">Let's Connect</span>
       <h2>Get In Touch</h2>
-      <p>Interested in collaborating on AI or fintech projects? I'd love to hear from you.</p>
+      <p>Interested in collaborating? I'd love to hear from you.</p>
       <form className="contact-form" action="mailto:jessica9peng@gmail.com" method="post" encType="text/plain">
         <input type="text" name="firstName" placeholder="First Name" aria-label="First Name" />
         <input type="text" name="lastName" placeholder="Last Name" aria-label="Last Name" />
@@ -438,8 +585,9 @@ function App() {
       />
       <main>
         <Hero />
-        <Stats />
+        {/* <Stats /> */}
         <Experience />
+        {SHOW_INVOLVEMENT && <Involvement />}
         <Education />
         <Skills />
         <Projects />

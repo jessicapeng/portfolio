@@ -21,7 +21,7 @@ Built with **React 19** and **Vite**.
 
 ```bash
 npm install
-npm run dev     # local dev server
+npm run dev     # local dev server at http://127.0.0.1:5173
 npm run build   # production build
 ```
 
