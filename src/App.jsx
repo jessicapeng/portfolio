@@ -41,9 +41,8 @@ const experiences = [
   },
   {
     date: '2019 - 2020',
-    company: 'Alinea Invest',
+    company: 'Alinea Invest YC \'23',
     role: 'Early Engineer',
-    badge: 'YC \'23 Startup',
   },
   {
     date: '2019 - 2021',
