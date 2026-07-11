@@ -1,19 +1,9 @@
-import { useState } from 'react';
 import './App.css';
 
 const profileImage =
   'https://static.wixstatic.com/media/2296b6_34c632e1db4c433c8a77a2075cb92964~mv2.png/v1/crop/x_0,y_33,w_1182,h_1297/fill/w_406,h_446,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/profile%20professional.png';
 
 const SHOW_INVOLVEMENT = false; 
-
-const navItems = [
-  ['Experience', '#section-experience'],
-  ...(SHOW_INVOLVEMENT ? [['Involvement', '#section-involvement']] : []),
-  ['Education', '#section-education'],
-  ['Skills', '#section-skills'],
-  ['Projects', '#section-projects'],
-  ['Contact', '#section-contact'],
-];
 
 const stats = [
   ['4+', 'Years at Goldman Sachs'],
@@ -30,7 +20,6 @@ const experiences = [
     badge: 'Investment Banking Engineering · AI Applications · Marcus',
     awards: [
       "Chair of Goldman's Junior Engineering Committee",
-      { text: 'Recipient of Goldman Sachs Cultural Award', color: 'purple' },
     ],
     featured: true,
   },
@@ -192,7 +181,7 @@ const skillGroups = [
   {
     title: 'AI / ML',
     skills: ['Python', 'PyTorch', 'TensorFlow', 'RAG', 'MCP', 'ADK', 'Computer Vision', 'NLP', 'MATLAB', 'Research'],
-    highlights: ['Python', 'TensorFlow', 'Computer Vision', 'NLP'],
+    highlights: ['Python', 'PyTorch', 'TensorFlow', 'RAG', 'MCP', 'ADK', 'Computer Vision', 'NLP'],
   },
   {
     title: 'Engineering',
@@ -216,12 +205,12 @@ const skillGroups = [
       'Git',
       'iOS',
     ],
-    highlights: ['Java', 'C / C++'],
+    highlights: ['TypeScript', 'SQL', 'React', 'FastAPI', 'AWS', 'Docker', 'K8s', 'Kafka', 'Snowflake', 'Elasticsearch'],
   },
   {
     title: 'Finance & Tools',
-    skills: ['Excel', 'Financial Modeling', 'Figma', 'HTML / CSS / JS', 'Photoshop', 'SolidWorks'],
-    highlights: ['Excel', 'Financial Modeling'],
+    skills: ['Excel', 'Figma', 'HTML / CSS / JS', 'Photoshop', 'SolidWorks'],
+    highlights: [],
   },
 ];
 
@@ -273,43 +262,6 @@ function SectionHeader({ tag, title }) {
       <h2 className="section-title">{title}</h2>
       <div className="section-line" />
     </div>
-  );
-}
-
-function Nav({ mobileOpen, onToggleMobile, onCloseMobile }) {
-  return (
-    <>
-      <nav id="redesign-nav">
-        <a className="nav-logo" href="#redesign-hero" onClick={onCloseMobile}>
-          Jessica Peng
-        </a>
-        <ul className="nav-links">
-          {navItems.map(([label, href]) => (
-            <li key={href}>
-              <a href={href}>{label}</a>
-            </li>
-          ))}
-        </ul>
-        <button
-          id="mobile-menu-btn"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
-          onClick={onToggleMobile}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </nav>
-      <div id="mobile-nav-drawer" className={mobileOpen ? 'open' : ''}>
-        {navItems.map(([label, href]) => (
-          <a key={href} href={href} onClick={onCloseMobile}>
-            {label}
-          </a>
-        ))}
-      </div>
-    </>
   );
 }
 
@@ -574,15 +526,8 @@ function Contact() {
 }
 
 function App() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
     <div id="redesign-root">
-      <Nav
-        mobileOpen={mobileOpen}
-        onToggleMobile={() => setMobileOpen((open) => !open)}
-        onCloseMobile={() => setMobileOpen(false)}
-      />
       <main>
         <Hero />
         {/* <Stats /> */}
