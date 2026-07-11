@@ -164,7 +164,7 @@ const education = [
     year: '2018 - 2022',
     school: 'Columbia University',
     degree: 'B.S. in Computer Science · New York, NY',
-    pills: ['Dean\'s List', "GPA: 3.9", 'AI / NLP', 'Databases'],
+    pills: ['Dean\'s List', "GPA: 3.9", 'AI', 'NLP', 'Computer Vision', 'Databases'],
     primary: true,
   },
   {
