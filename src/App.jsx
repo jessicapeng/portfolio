@@ -81,7 +81,7 @@ const involvements = [
     image: 'https://picsum.photos/seed/fireside/240/180',
   },
   {
-    title: 'Community Dance Workshop Fundraising',
+    title: 'Community Dance Workshop',
     org: 'Goldman Sachs',
     year: '2023',
     role: 'Teacher',
@@ -137,15 +137,15 @@ const involvements = [
     image: 'https://picsum.photos/seed/hackathon/240/180',
   },
 
-  {
-    title: 'Global Engineering Townhall',
-    org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Feature',
-    description:
-      'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
-    image: 'https://picsum.photos/seed/showcase/240/180',
-  },
+  // {
+  //   title: 'Global Engineering Townhall',
+  //   org: 'Goldman Sachs',
+  //   year: '2025',
+  //   role: 'Feature',
+  //   description:
+  //     'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
+  //   image: 'https://picsum.photos/seed/showcase/240/180',
+  // },
   {
     title: 'Building User Interfaces for AI Applications',
     org: 'Goldman Sachs',
@@ -164,24 +164,24 @@ const involvements = [
       'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
     image: 'https://picsum.photos/seed/showcase/240/180',
   },
-  {
-    title: 'NIC Career Progression Panel',
-    org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Panelist',
-    description:
-      'Panel discussion on building a network across divisions and making the most of the analyst community.',
-    image: 'https://picsum.photos/seed/networking/240/180',
-  },
-   {
-    title: 'Goldman x Columbia Alumni Panel',
-    org: 'Goldman Sachs',
-    year: '2024',
-    role: 'Panelist',
-    description:
-      'Panel discussion on building a network across divisions and making the most of the analyst community.',
-    image: 'https://picsum.photos/seed/networking/240/180',
-  },
+  // {
+  //   title: 'NIC Career Progression Panel',
+  //   org: 'Goldman Sachs',
+  //   year: '2025',
+  //   role: 'Panelist',
+  //   description:
+  //     'Panel discussion on building a network across divisions and making the most of the analyst community.',
+  //   image: 'https://picsum.photos/seed/networking/240/180',
+  // },
+  //  {
+  //   title: 'Goldman x Columbia Alumni Panel',
+  //   org: 'Goldman Sachs',
+  //   year: '2024',
+  //   role: 'Panelist',
+  //   description:
+  //     'Panel discussion on building a network across divisions and making the most of the analyst community.',
+  //   image: 'https://picsum.photos/seed/networking/240/180',
+  // },
 ];
 
 const education = [
