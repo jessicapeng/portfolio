@@ -87,7 +87,7 @@ textarea {
 .hero-left {
   grid-area: intro;
   align-self: start;
-  padding-top: 72px;
+  padding-top: 112px;
 }
 
 .hero-badge {
