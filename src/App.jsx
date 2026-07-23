@@ -16,7 +16,7 @@ const stats = [
 
 const experiences = [
   {
-    date: '2022 - 2025',
+    date: '2022 - 2026',
     company: 'Goldman Sachs',
     role: 'Software Engineer (Associate) · Software Engineer (Analyst)',
     badge: 'Investment Banking Engineering · AI · Marcus',
