@@ -73,19 +73,22 @@ textarea {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
-  grid-template-areas:
-    "intro card"
-    "career events";
   column-gap: 48px;
-  row-gap: 24px;
   align-items: start;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
 }
 
+.hero-col-left,
+.hero-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
 .hero-left {
-  grid-area: intro;
   align-self: start;
   padding-top: 112px;
 }
@@ -187,7 +190,6 @@ textarea {
 }
 
 .hero-card {
-  grid-area: card;
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 12px;
@@ -195,7 +197,6 @@ textarea {
 }
 
 #section-experience {
-  grid-area: career;
   width: 100%;
   max-width: none;
   margin: 0;
@@ -211,7 +212,6 @@ textarea {
 }
 
 .events-panel {
-  grid-area: events;
   align-self: start;
   border: 1px solid var(--hairline);
   border-radius: 12px;
@@ -926,16 +926,29 @@ textarea {
 
   .hero-grid {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "intro"
-      "card"
-      "career"
-      "events";
     gap: 40px;
+  }
+
+  .hero-col-left,
+  .hero-col-right {
+    display: contents;
   }
 
   .hero-left {
     padding-top: 0;
+    order: 1;
+  }
+
+  .hero-card {
+    order: 2;
+  }
+
+  #section-experience {
+    order: 3;
+  }
+
+  .events-panel {
+    order: 4;
   }
 
   .hero-name {

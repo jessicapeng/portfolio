@@ -310,57 +310,61 @@ function Hero() {
   return (
     <div id="redesign-hero">
       <div className="hero-grid">
-        <div className="hero-left">
-          {!ONE_PAGER && <div className="hero-badge">AI Engineer · Fintech</div>}
-          <h1 className="hero-name">
-            Jessica Peng
-          </h1>
-          <p className="hero-title">
-            <strong>AI Full-Stack Software Engineer</strong>
-          </p>
-          <p className="hero-description">
-             Developing Gen AI applications within Investment Banking at Goldman Sachs
-          </p>
-          {!ONE_PAGER && (
-            <div className="hero-tags">
-              <span className="hero-tag">Machine Learning</span>
-              <span className="hero-tag">NLP</span>
-              <span className="hero-tag">Computer Vision</span>
-              <span className="hero-tag">Multi-Agent</span>
-              <span className="hero-tag">RAG</span>
-              <span className="hero-tag">Financial Engineering</span>
-              <span className="hero-tag">Investment Banking</span>
-              <span className="hero-tag">Gen AI</span>
-            </div>
-          )}
-        </div>
-        <div className="hero-card">
-          <img src={profileImage} className="hero-card-photo" alt="Jessica Peng" />
-          <div className="hero-card-name">Jessica Peng</div>
-          <div className="hero-card-role">AI Software Engineer</div>
-          <hr className="hero-card-divider" />
-          <div className="hero-card-info">
-            <InfoItem label="Company" value="Goldman Sachs" />
-            <InfoItem label="Education">
-              CS, Columbia University
-            </InfoItem>
-            <InfoItem label="Email">
-              <a href="mailto:jessica9peng@gmail.com">jessica9peng@gmail.com</a>
-            </InfoItem>
-            <InfoItem label="GitHub">
-              <a href="https://github.com/jessicapeng" target="_blank" rel="noreferrer">
-                github.com/jessicapeng
-              </a>
-            </InfoItem>
-            <InfoItem label="LinkedIn">
-              <a href="https://www.linkedin.com/in/pengjessica" target="_blank" rel="noreferrer">
-                linkedin.com/in/pengjessica
-              </a>
-            </InfoItem>
+        <div className="hero-col-left">
+          <div className="hero-left">
+            {!ONE_PAGER && <div className="hero-badge">AI Engineer · Fintech</div>}
+            <h1 className="hero-name">
+              Jessica Peng
+            </h1>
+            <p className="hero-title">
+              <strong>AI Full-Stack Software Engineer</strong>
+            </p>
+            <p className="hero-description">
+               Developing Gen AI applications within Investment Banking at Goldman Sachs
+            </p>
+            {!ONE_PAGER && (
+              <div className="hero-tags">
+                <span className="hero-tag">Machine Learning</span>
+                <span className="hero-tag">NLP</span>
+                <span className="hero-tag">Computer Vision</span>
+                <span className="hero-tag">Multi-Agent</span>
+                <span className="hero-tag">RAG</span>
+                <span className="hero-tag">Financial Engineering</span>
+                <span className="hero-tag">Investment Banking</span>
+                <span className="hero-tag">Gen AI</span>
+              </div>
+            )}
           </div>
+          <Experience />
         </div>
-        <Experience />
-        <EventsPanel />
+        <div className="hero-col-right">
+          <div className="hero-card">
+            <img src={profileImage} className="hero-card-photo" alt="Jessica Peng" />
+            <div className="hero-card-name">Jessica Peng</div>
+            <div className="hero-card-role">AI Software Engineer</div>
+            <hr className="hero-card-divider" />
+            <div className="hero-card-info">
+              <InfoItem label="Company" value="Goldman Sachs" />
+              <InfoItem label="Education">
+                CS, Columbia University
+              </InfoItem>
+              <InfoItem label="Email">
+                <a href="mailto:jessica9peng@gmail.com">jessica9peng@gmail.com</a>
+              </InfoItem>
+              <InfoItem label="GitHub">
+                <a href="https://github.com/jessicapeng" target="_blank" rel="noreferrer">
+                  github.com/jessicapeng
+                </a>
+              </InfoItem>
+              <InfoItem label="LinkedIn">
+                <a href="https://www.linkedin.com/in/pengjessica" target="_blank" rel="noreferrer">
+                  linkedin.com/in/pengjessica
+                </a>
+              </InfoItem>
+            </div>
+          </div>
+          <EventsPanel />
+        </div>
       </div>
     </div>
   );
