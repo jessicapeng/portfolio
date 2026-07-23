@@ -341,7 +341,7 @@ function Hero() {
           <div className="hero-card">
             <img src={profileImage} className="hero-card-photo" alt="Jessica Peng" />
             <div className="hero-card-name">Jessica Peng</div>
-            <div className="hero-card-role">AI Software Engineer</div>
+            <div className="hero-card-role">I like boba</div>
             <hr className="hero-card-divider" />
             <div className="hero-card-info">
               <InfoItem label="Company" value="Goldman Sachs" />
@@ -590,7 +590,7 @@ function Contact() {
           Email
         </a>
       </div>
-      <div className="footer-copy">© 2026 Jessica Peng · AI Software Engineer</div>
+      <div className="footer-copy">© 2026 Jessica Peng</div>
     </section>
   );
 }
