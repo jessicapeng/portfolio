@@ -341,7 +341,7 @@ function Hero() {
           <div className="hero-card">
             <img src={profileImage} className="hero-card-photo" alt="Jessica Peng" />
             <div className="hero-card-name">Jessica Peng</div>
-            <div className="hero-card-role">I like boba</div>
+            <div className="hero-card-role">sustained on boba 🧋 </div>
             <hr className="hero-card-divider" />
             <div className="hero-card-info">
               <InfoItem label="Company" value="Goldman Sachs" />
