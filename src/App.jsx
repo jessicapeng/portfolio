@@ -81,9 +81,11 @@ const involvements = [
     image: 'https://picsum.photos/seed/fireside/240/180',
   },
   {
-    title: 'Community Dance Workshop',
+    title: 'PYJ NYC Community Dance Workshop',
     org: 'Goldman Sachs',
-    year: '2023',
+    year: '2025',
+    linkedText: "PYJ NYC Community Dance Workshop",
+    href: "https://drive.google.com/drive/folders/14aYOmBQxiEkuki4NQeSHHFDUmLY3P477?usp=drive_link",
     role: 'Teacher',
     description:
       "Hosted a fireside chat with Goldman Sachs' Chief Information Officer on AI, engineering culture, and career growth.",
@@ -123,6 +125,15 @@ const involvements = [
     org: 'Goldman Sachs',
     year: '2026',
     role: 'Presenter',
+    description:
+      'Hands-on session for engineers on prompt engineering techniques for LLM applications in production.',
+    image: 'https://picsum.photos/seed/prompt/240/180',
+  },
+  {
+    title: 'Goldman\'s 10,000 Small Businesses',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Organizer',
     description:
       'Hands-on session for engineers on prompt engineering techniques for LLM applications in production.',
     image: 'https://picsum.photos/seed/prompt/240/180',
