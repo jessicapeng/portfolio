@@ -346,7 +346,7 @@ function Hero() {
             <div className="hero-card-info">
               <InfoItem label="Company" value="Goldman Sachs" />
               <InfoItem label="Education">
-                CS, Columbia University
+                Computer Science, Columbia University
               </InfoItem>
               <InfoItem label="Email">
                 <a href="mailto:jessica9peng@gmail.com">jessica9peng@gmail.com</a>
